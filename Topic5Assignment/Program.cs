@@ -34,8 +34,11 @@
 
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("What's your takeaway from this?");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.ReadLine();
             Console.Clear();
+
+
         }
     }
 }

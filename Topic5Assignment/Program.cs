@@ -7,6 +7,7 @@
             int people = 20;
             int rats = 30;
             int sludge = 15;
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("People: " + people + " Sludge: " + sludge + " Rats: " + rats);
             if (people < rats)
             {
@@ -37,7 +38,13 @@
             Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.ReadLine();
             Console.Clear();
-
+            sludge += 5;
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("People: " + people + " Sludge: " + sludge + " Rats: " + rats);
+            if (people >= sludge)
+            {
+               Console.WriteLine("");
+            }
 
         }
     }

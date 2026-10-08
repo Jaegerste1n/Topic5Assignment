@@ -49,7 +49,7 @@
             Console.WriteLine("What's your takeaway from this?");
             Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.ReadLine();
-           
+
             sludge += 5;
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("People: " + people + " Sludge: " + sludge + " Rats: " + rats);
@@ -290,6 +290,84 @@
             else if (thirdAge >= 25)
             {
                 Console.WriteLine("Congrats. You're a big boy.");
+            }
+            Console.WriteLine("Hold on, I forgot. How old are you again?");
+            int fourthAge;
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            int.TryParse(Console.ReadLine(), out fourthAge);
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            if (fourthAge >= 13 && fourthAge <= 19)
+            {
+                Console.WriteLine("You're a wee baby.");
+            }
+            else
+            {
+                Console.WriteLine("Okay.");
+            }
+            Console.WriteLine("How much money do you have?");
+            int money;
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            int.TryParse(Console.ReadLine(), out money);
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("Are you working tonight? Yes or no");
+            string work;
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            work = Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            if (money >= 20 && work.ToLower() == "no")
+            {
+                Console.WriteLine("You could go see a movie. Good for you.");
+            }
+            else
+            {
+                Console.WriteLine("Shame");
+            }
+            string password;
+
+
+            Console.WriteLine("What's the magic word again?");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            password = Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            if (password == "fireball")
+            {
+
+            }
+            else
+            {
+                Console.WriteLine("No. Try again.");
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                password = Console.ReadLine();
+                if (password == "fireball")
+                {
+
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkBlue;
+                    Console.WriteLine("No. Try again.");
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    password = Console.ReadLine();
+                    if (password == "fireball")
+                    {
+
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.DarkBlue;
+                        Console.WriteLine("No. Try again.");
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        password = Console.ReadLine();
+                        if (password == "fireball")
+                        {
+
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                }
             }
 
         }

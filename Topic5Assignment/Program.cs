@@ -4,6 +4,30 @@
     {
         static void Main(string[] args)
         {
+            string chosenMethod;
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("Select a method to run.");
+            Console.WriteLine("tutorial");
+            Console.WriteLine("spaceboxing");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            chosenMethod = Console.ReadLine();
+            if (chosenMethod.ToLower() == "tutorial")
+            {
+                Console.Clear();
+                Tutorial();
+            }
+            else if (chosenMethod.ToLower() == "spaceboxing")
+            {
+                Console.Clear();
+                SpaceBoxing();
+            }
+
+
+        }
+        public static void Tutorial()
+        {
+
+        
             int people;
             int rats;
             int sludge;
@@ -331,7 +355,8 @@
             Console.ForegroundColor = ConsoleColor.DarkBlue;
             if (password == "fireball")
             {
-
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("Look At What You've Done, You've Reduced Her To Ash!");
             }
             else
             {
@@ -340,7 +365,8 @@
                 password = Console.ReadLine();
                 if (password == "fireball")
                 {
-
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    Console.WriteLine("Look At What You've Done, You've Reduced Her To Ash!");
                 }
                 else
                 {
@@ -350,7 +376,8 @@
                     password = Console.ReadLine();
                     if (password == "fireball")
                     {
-
+                        Console.ForegroundColor = ConsoleColor.DarkGreen;
+                        Console.WriteLine("Look At What You've Done, You've Reduced Her To Ash!");
                     }
                     else
                     {
@@ -360,16 +387,121 @@
                         password = Console.ReadLine();
                         if (password == "fireball")
                         {
-
+                            Console.ForegroundColor = ConsoleColor.DarkGreen;
+                            Console.WriteLine("Look At What You've Done, You've Reduced Her To Ash!");
                         }
                         else
                         {
-
+                            Console.ForegroundColor = ConsoleColor.DarkBlue;
+                            Console.WriteLine("No. Try again.");
+                            Console.ForegroundColor = ConsoleColor.DarkGray;
+                            password = Console.ReadLine();
+                            if (password == "fireball")
+                            {
+                                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                                Console.WriteLine("Look At What You've Done, You've Reduced Her To Ash!");
+                            }
+                            else
+                            {
+                                Console.ForegroundColor = ConsoleColor.DarkBlue;
+                                Console.WriteLine("You're a failure.");
+                            }
                         }
                     }
                 }
             }
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("Nevertheless Regardless Moving On Doesn't Matter");
+            Console.WriteLine("Enter The Topping Pepperoni or Rats");
+            string topping;
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            topping = Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            if (topping.ToLower() == "pepperoni" || topping.ToLower() == "rats")
+            {
+                Console.WriteLine("Okay");
+            }
+            else
+            {
+                Console.WriteLine("NO NO NO NO NO NO NO NO NO");
+            }
+            Console.WriteLine("The Buss Pass Is $3.50");
+            Console.WriteLine("How Old Are You Again? Scratch That You're " + fourthAge + " We Know This Already");
+            if (fourthAge >= 60 || fourthAge <= 12)
+            {
+                Console.WriteLine("Dumb Babies And Stinky Old Men Are Instead Charged $20,000");
+            }
+            Console.WriteLine("Hey Hey What's      Your Favorite Animal");
+            string animal;
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            animal = Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            if (animal.ToLower() == "rat" || animal.ToLower() == "shoggoth")
+            {
+                Console.WriteLine("What");
+            }
+            else
+            {
+                Console.WriteLine("No");
+            }
+            Console.WriteLine("What Is, The Temperature Outside");
+            int outTemp;
+            string weather;
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            int.TryParse(Console.ReadLine(), out outTemp);
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("What Is The, Weather Outside");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            weather = Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            if (weather == "sunny" || outTemp >= 25)
+            {
+                Console.WriteLine("Go In Water");
+            }
+            else
+            {
+                Console.WriteLine("Go To Sleep");
+            }
+            int personOne, personTwo, personThree;
+            Console.WriteLine("Enter An Age");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            int.TryParse(Console.ReadLine(), out personOne);
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("Enter An Age");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            int.TryParse(Console.ReadLine(), out personTwo);
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("Enter An Age");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            int.TryParse(Console.ReadLine(), out personThree);
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            if (personTwo == personOne && personTwo != personThree)
+            {
+                Console.WriteLine("Guy 2 Is The Same Age As Someone But Not Both");
+            }
+            else if (personTwo == personThree && personTwo != personOne)
+            {
+                Console.WriteLine("Guy 2 Is The Same Age As Someone But Not Both");
+            }
+            if (personOne != personTwo && personOne != personThree)
+            {
+                Console.WriteLine("Guy 1 Does Not Share An Age With Anyone");
+            }
+            if (personOne == personTwo && personOne == personThree && personTwo == personThree)
+            {
+                Console.WriteLine("They Are All The Same Age");
+            }
+            if (personOne != personTwo && personOne != personThree && personTwo != personThree)
+            {
+                Console.WriteLine("They Are All Different Ages");
+            }
+            
+        }
+
+        public static void SpaceBoxing()
+        {
 
         }
+
     }
 }

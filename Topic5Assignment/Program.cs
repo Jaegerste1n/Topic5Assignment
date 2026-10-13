@@ -1,4 +1,6 @@
-﻿namespace Topic5Assignment
+﻿using System.Numerics;
+
+namespace Topic5Assignment
 {
     internal class Program
     {
@@ -7,8 +9,11 @@
             string chosenMethod;
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("Select a method to run.");
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("tutorial");
             Console.WriteLine("spaceboxing");
+            Console.WriteLine("calculator");
+            Console.WriteLine("quiz");
             Console.ForegroundColor = ConsoleColor.DarkGray;
             chosenMethod = Console.ReadLine();
             if (chosenMethod.ToLower() == "tutorial")
@@ -20,6 +25,16 @@
             {
                 Console.Clear();
                 SpaceBoxing();
+            }
+            else if (chosenMethod.ToLower() == "calculator")
+            {
+                Console.Clear();
+                Calculator();
+            }
+            else if (chosenMethod.ToLower() == "quiz")
+            {
+                Console.Clear();
+                Quiz();
             }
 
 
@@ -495,13 +510,189 @@
             {
                 Console.WriteLine("They Are All Different Ages");
             }
-            
+
         }
 
         public static void SpaceBoxing()
         {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("What is your current Earth weight?");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            int weight;
+            int.TryParse(Console.ReadLine(), out weight);
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            if (weight >= 175)
+            {
+                Console.WriteLine("Fatty.");
+            }
+            Console.WriteLine("I have information for the following planets:");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("1: Venus        2: Mars        3: Evil Jupiter");
+            Console.WriteLine("");
+            Console.WriteLine("4: Petrichor V  5: Uranus      6: Hoxxess V");
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("Where are you headed?");
+            int planet;
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            int.TryParse(Console.ReadLine(), out planet);
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            if (planet == 1)
+            {
+                Console.WriteLine("Your weight would be " + weight * 0.78 + " on that planet.");
+            }
+            else if (planet == 2)
+            {
+                Console.WriteLine("Your weight would be " + weight * 0.39 + " on that planet.");
+            }
+            else if (planet == 3)
+            {
+                Console.WriteLine("Your weight would be " + weight * 2.65 + " on that planet.");
+            }
+            else if (planet == 4)
+            {
+                Console.WriteLine("Your weight would be " + weight * 1.17 + " on that planet.");
+            }
+            else if (planet == 5)
+            {
+                Console.WriteLine("Your weight would be " + weight * 1.05 + " on that planet.");
+            }
+            else if (planet == 6)
+            {
+                Console.WriteLine("Your weight would be " + weight * 1.23 + " on that planet.");
+            }
+            else
+            {
+                Console.WriteLine("Oh, you're funny.");
+            }
 
         }
+        public static void Calculator()
+        {
+            double numberOne, numberTwo;
+            string calcOperator;
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("Enter A Number");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+       
+            double.TryParse(Console.ReadLine(), out numberOne);
 
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("Enter An Operator (+, -, /, *)");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            
+            calcOperator = Console.ReadLine();
+
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("Enter A Number");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            double.TryParse(Console.ReadLine(), out numberTwo);
+
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            if (calcOperator == "+")
+            {
+                Console.WriteLine(+ numberOne + " " + calcOperator + " " + numberTwo + " = " + (numberOne + numberTwo));
+            }
+            else if (calcOperator == "-")
+            {
+                Console.WriteLine(+ numberOne + " " + calcOperator + " " + numberTwo + " = " + (numberOne - numberTwo));
+            }
+            else if (calcOperator == "/")
+            {
+                Console.WriteLine(+ numberOne + " " + calcOperator + " " + numberTwo + " = " + (numberOne / numberTwo));
+            }
+            else if (calcOperator == "*")
+            {
+                Console.WriteLine(+ numberOne + " " + calcOperator + " " + numberTwo + " = " + (numberOne * numberTwo));
+            }
+            else
+            {
+                Console.WriteLine("Syntax Error");
+            }
+
+        }
+        public static void Quiz()
+        {
+            int score;
+            string answer;
+            score = 0;
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine("Which of these doesn't belong?");
+            Console.WriteLine("A) Dark worms scream inside my brain");
+            Console.WriteLine("B) Begging me to eat again");
+            Console.WriteLine("C) Hearts and blood and bile and soil");
+            Console.WriteLine("D) To the end with bad effect");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            answer = Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            if (answer.ToUpper() == "A")
+            {
+                Console.WriteLine("No. Don't be palsy now.");
+                score = score - 1;
+                Console.WriteLine("Current score: " + score + "");
+            }
+            else if (answer.ToUpper() == "B")
+            {
+                Console.WriteLine("Incorrect.");
+                score = score - 1;
+                Console.WriteLine("Current score: " + score + "");
+            }
+            else if (answer.ToUpper() == "C")
+            {
+                Console.WriteLine("Squeemish? No.");
+                score = score - 1;
+                Console.WriteLine("Current score: " + score + "");
+            }
+            else if (answer.ToUpper() == "D")
+            {
+                Console.WriteLine("Good. You have pattern recognition.");
+                score = score + 1;
+                Console.WriteLine("Current score: " + score + "");
+            }
+            else
+            {
+                Console.WriteLine("...");
+                score = score - 3;
+                Console.WriteLine("Current score: " + score + "");
+            }
+            
+            Console.WriteLine("placeholder");
+            Console.WriteLine("A) placeholder");
+            Console.WriteLine("B) placeholder");
+            Console.WriteLine("C) placeholder");
+            Console.WriteLine("D) placeholder");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            answer = Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            if (answer.ToUpper() == "A")
+            {
+                Console.WriteLine("placeholder");
+                score = score - 1;
+                Console.WriteLine("Current score: " + score + "");
+            }
+            else if (answer.ToUpper() == "B")
+            {
+                Console.WriteLine("placeholder");
+                score = score - 1;
+                Console.WriteLine("Current score: " + score + "");
+            }
+            else if (answer.ToUpper() == "C")
+            {
+                Console.WriteLine("placeholder");
+                score = score - 1;
+                Console.WriteLine("Current score: " + score + "");
+            }
+            else if (answer.ToUpper() == "D")
+            {
+                Console.WriteLine("placeholder");
+                score = score + 1;
+                Console.WriteLine("Current score: " + score + "");
+            }
+            else
+            {
+                Console.WriteLine("...");
+                score = score - 3;
+                Console.WriteLine("Current score: " + score + "");
+            }
+        }
     }
 }

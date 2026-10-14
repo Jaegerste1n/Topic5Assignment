@@ -654,7 +654,86 @@ namespace Topic5Assignment
                 score = score - 3;
                 Console.WriteLine("Current score: " + score + "");
             }
-            
+
+            Console.WriteLine("Who here hates Scotland the most?");
+            Console.WriteLine("A) Bulldog Browns");
+            Console.WriteLine("B) Simon Hayes");
+            Console.WriteLine("C) Chaos Lord Zargothrax");
+            Console.WriteLine("D) Sgt. Doe");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            answer = Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            if (answer.ToUpper() == "A")
+            {
+                Console.WriteLine("No. What?");
+                score = score - 1;
+                Console.WriteLine("Current score: " + score + "");
+            }
+            else if (answer.ToUpper() == "B")
+            {
+                Console.WriteLine("And why's that?");
+                score = score - 1;
+                Console.WriteLine("Current score: " + score + "");
+            }
+            else if (answer.ToUpper() == "C")
+            {
+                Console.WriteLine("Nobody else is going to tear open space to blow up Auchtertool specifically.");
+                score = score + 1;
+                Console.WriteLine("Current score: " + score + "");
+            }
+            else if (answer.ToUpper() == "D")
+            {
+                Console.WriteLine("He's got a buddy there.");
+                score = score - 1;
+                Console.WriteLine("Current score: " + score + "");
+            }
+            else
+            {
+                Console.WriteLine("...");
+                score = score - 3;
+                Console.WriteLine("Current score: " + score + "");
+            }
+
+            Console.WriteLine("''My children drowned, so I took theirs for mine.''");
+            Console.WriteLine("''And replaced their skeleton, with long; silver twine.''");
+            Console.WriteLine("A) Taker");
+            Console.WriteLine("B) Deer Lord");
+            Console.WriteLine("C) Merchant");
+            Console.WriteLine("D) Parasite");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            answer = Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            if (answer.ToUpper() == "A")
+            {
+                Console.WriteLine("Like a carrot on the end of a stick.");
+                score = score - 1;
+                Console.WriteLine("Current score: " + score + "");
+            }
+            else if (answer.ToUpper() == "B")
+            {
+                Console.WriteLine("Why would it do that?");
+                score = score - 1;
+                Console.WriteLine("Current score: " + score + "");
+            }
+            else if (answer.ToUpper() == "C")
+            {
+                Console.WriteLine("Who happened to sell puppets. (past tense)");
+                score = score + 1;
+                Console.WriteLine("Current score: " + score + "");
+            }
+            else if (answer.ToUpper() == "D")
+            {
+                Console.WriteLine("What would that have to do with anything?");
+                score = score - 1;
+                Console.WriteLine("Current score: " + score + "");
+            }
+            else
+            {
+                Console.WriteLine("...");
+                score = score - 3;
+                Console.WriteLine("Current score: " + score + "");
+            }
+
             Console.WriteLine("placeholder");
             Console.WriteLine("A) placeholder");
             Console.WriteLine("B) placeholder");
@@ -666,32 +745,61 @@ namespace Topic5Assignment
             if (answer.ToUpper() == "A")
             {
                 Console.WriteLine("placeholder");
-                score = score - 1;
-                Console.WriteLine("Current score: " + score + "");
+                score = score + 1;
+                Console.WriteLine("Final score: " + score + "");
             }
             else if (answer.ToUpper() == "B")
             {
                 Console.WriteLine("placeholder");
                 score = score - 1;
-                Console.WriteLine("Current score: " + score + "");
+                Console.WriteLine("Final score: " + score + "");
             }
             else if (answer.ToUpper() == "C")
             {
                 Console.WriteLine("placeholder");
                 score = score - 1;
-                Console.WriteLine("Current score: " + score + "");
+                Console.WriteLine("Final score: " + score + "");
             }
             else if (answer.ToUpper() == "D")
             {
                 Console.WriteLine("placeholder");
-                score = score + 1;
-                Console.WriteLine("Current score: " + score + "");
+                score = score - 1;
+                Console.WriteLine("Final score: " + score + "");
             }
             else
             {
                 Console.WriteLine("...");
-                score = score - 3;
-                Console.WriteLine("Current score: " + score + "");
+                score = score - 990;
+                Console.WriteLine("Final score: " + score + "");
+            }
+            Console.WriteLine("That's that, then.");
+            if (score <= -5)
+            {
+                Console.WriteLine("You are, dare I say, pathetic.");
+            }
+            else if (score < 0)
+            {
+                Console.WriteLine("Couldn't crawl yourself out. Unfortunate.");
+            }
+            else if (score == 0)
+            {
+                Console.WriteLine("Zero. Really?");
+            }
+            else if (score == 1)
+            {
+                Console.WriteLine("Well, you got one.");
+            }
+            else if (score == 2)
+            {
+                Console.WriteLine("Pity pass.");
+            }
+            else if (score == 3)
+            {
+                Console.WriteLine("Really couldn't push through to 4?");
+            }
+            else if (score == 4)
+            {
+                Console.WriteLine("Good job.");
             }
         }
     }

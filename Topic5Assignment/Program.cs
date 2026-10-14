@@ -745,8 +745,8 @@ namespace Topic5Assignment
             if (answer.ToUpper() == "A")
             {
                 Console.WriteLine("placeholder");
-                score = score + 1;
-                Console.WriteLine("Final score: " + score + "");
+                score = score - 1;
+                Console.WriteLine("Current score: " + score + "");
             }
             else if (answer.ToUpper() == "B")
             {

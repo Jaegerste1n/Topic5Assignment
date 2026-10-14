@@ -665,7 +665,7 @@ namespace Topic5Assignment
             Console.ForegroundColor = ConsoleColor.DarkRed;
             if (answer.ToUpper() == "A")
             {
-                Console.WriteLine("placeholder");
+                Console.WriteLine("placeholdera");
                 score = score - 1;
                 Console.WriteLine("Current score: " + score + "");
             }

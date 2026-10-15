@@ -734,35 +734,35 @@ namespace Topic5Assignment
                 Console.WriteLine("Current score: " + score + "");
             }
 
-            Console.WriteLine("placeholder");
-            Console.WriteLine("A) placeholder");
-            Console.WriteLine("B) placeholder");
-            Console.WriteLine("C) placeholder");
-            Console.WriteLine("D) placeholder");
+            Console.WriteLine("Ego Sum Ira Domini");
+            Console.WriteLine("A) I am the wrath of The Lord");
+            Console.WriteLine("B) I think, therefore I am");
+            Console.WriteLine("C) I am The Divine Light");
+            Console.WriteLine("D) I am the Hand of God");
             Console.ForegroundColor = ConsoleColor.DarkGray;
             answer = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkRed;
             if (answer.ToUpper() == "A")
             {
-                Console.WriteLine("placeholder");
-                score = score - 1;
-                Console.WriteLine("Current score: " + score + "");
+                Console.WriteLine("As well as the tenth plague.");
+                score = score + 1;
+                Console.WriteLine("Final score: " + score + "");
             }
             else if (answer.ToUpper() == "B")
             {
-                Console.WriteLine("placeholder");
+                Console.WriteLine("Wrong quote.");
                 score = score - 1;
                 Console.WriteLine("Final score: " + score + "");
             }
             else if (answer.ToUpper() == "C")
             {
-                Console.WriteLine("placeholder");
+                Console.WriteLine("Too bright.");
                 score = score - 1;
                 Console.WriteLine("Final score: " + score + "");
             }
             else if (answer.ToUpper() == "D")
             {
-                Console.WriteLine("placeholder");
+                Console.WriteLine("No.");
                 score = score - 1;
                 Console.WriteLine("Final score: " + score + "");
             }
